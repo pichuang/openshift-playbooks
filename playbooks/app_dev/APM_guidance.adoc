@@ -143,7 +143,7 @@ The general architecture of Jaeger is the following:
 
 image::images/jaeger_architecture.png[]
 
-A jaeger client (http://jaeger.readthedocs.io/en/latest/client_libraries/[client libraries] for various languages exist) will generate trace information and sends them via a local UDP to a jaeger agent, running as a http://blog.kubernetes.io/2015/06/the-distributed-system-toolkit-patterns.html[sidecar]. The jaeger agent will perform the necessary sampling and throttling, and then send the traces to the central jaeger collector, which stores them in http://cassandra.apache.org/[Cassandra]. Once the traces are stored they can be visualized using the UI.
+A jaeger client (http://jaeger.readthedocs.io/en/latest/client_libraries/[client libraries] for various languages exist) will generate trace information and sends them via a local UDP to a jaeger agent, running as a http://blog.kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns.html[sidecar]. The jaeger agent will perform the necessary sampling and throttling, and then send the traces to the central jaeger collector, which stores them in http://cassandra.apache.org/[Cassandra]. Once the traces are stored they can be visualized using the UI.
 
 Instructions on how to install jaeger in OpenShift can be found https://github.com/jaegertracing/jaeger-openshift[here].
 
